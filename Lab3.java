@@ -10,9 +10,9 @@ public class Lab3 {
         String userInputRepeat = "", userInputRepeatCapitalized = "";
         do {
             System.out.println("Enter 1 for character removing\n" +
-                "Enter 2 for removing duplicates\n" +
-                "Enter 3 for counting vowels and consonants\n" +
-                "Enter 4 for displaying non-repeating and then repeated characters.");
+                    "Enter 2 for removing duplicates\n" +
+                    "Enter 3 for counting vowels and consonants\n" +
+                    "Enter 4 for displaying non-repeating and then repeated characters.");
             userInput = scr.nextInt();
             switch (userInput) {
                 case 1:
@@ -85,22 +85,18 @@ public class Lab3 {
 
     public static void removeDupes(String inputString) {
 
-        String inputStringCapitalized = inputString.toUpperCase();
-        String returnString = "";
+        String resultString = "";
+
         for (int i = 0; i < inputString.length(); i++) {
-            boolean dupe = false;
-            for (int j = 0; j <= returnString.length(); j++) {
-                if (inputStringCapitalized.charAt(i) == inputStringCapitalized.charAt(j)) {
-                    dupe = true;
-                    break;
-                }
-            }
-            if (dupe == false) {
-                returnString = returnString.concat(Character.toString(inputString.charAt(i)));
-            }
+            char tempChar = inputString.charAt(i);
+            if (resultString.indexOf(tempChar) < 0) { // returns -1 when the temp character isn't in the new string
+                resultString += tempChar; // essentially, the repeat character is not allowed into the new string with
+                                          // this if-statement
+            } // once it finds a second letter e, it says "oh i already have the letter
+              // *whatever* at index *whatever*, so result of if statement equals 1"
         }
 
-        System.out.println(returnString);
+        System.out.println(resultString);
 
     }
 
