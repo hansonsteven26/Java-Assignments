@@ -1,4 +1,4 @@
-package PhoneBook;
+package PhoneBookProject;
 
 public class Address {
 

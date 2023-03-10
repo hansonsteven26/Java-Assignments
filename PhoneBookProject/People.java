@@ -1,4 +1,4 @@
-package PhoneBook;
+package PhoneBookProject;
 
 import java.util.*;
 
