@@ -60,9 +60,10 @@ public class DataTypes {
         //Initializing an array, *** YOU MUST GIVE AN ARRAY ITS SIZE UPON INITIALIZATION ***
         myStringArray = new String[10];
         //All the values of an array are default to 0 for numbers, "" for Strings, ' ' for chars
+        //Ends at index 9
 
         // Arrays can be hard coded with values like such
-        int[] numArray = {1,2,3,4,5,6}; 
+        int[] numArray = {1,2,3,4,5,6}; // Rarely ever do this cause you prolly don't know your values
 
     }
     
